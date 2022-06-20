@@ -45,7 +45,7 @@ nav{
     color: #fc0808;
 }
 .left-sidebar{
-    width: 30%;
+    width: 27%;
     height: 100%;
     position: absolute;
     left: 0;
@@ -64,16 +64,22 @@ span{
     margin-top: 5%;
 }
 .left-side-col{
+    display: flex;
+    
     flex-basis: 40%;
+    
 }
 .left-side-col img{
     padding: 0%;
     width: 100%;
+    position: top;
     cursor: pointer;
     border-radius: 1px;
 }
 .right-side-col{
-    flex-basis: 55%;
+    flex-basis: 100%;
+    left: 50;
+    top: 0;
 }
 .button-r{
     background-color: #394343;
@@ -121,7 +127,9 @@ span{
 }
 .social-icon{
     display: flex;
-    margin-top: 30px;
+    position: relative;
+    padding: 15px 32px;
+    margin-top: 50px;
 }
 .icon{
     width: 100px;
