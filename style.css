@@ -7,7 +7,7 @@
     width: 100%;
     background-color: rgb(2, 2, 2);
     color: #c4c7cd;
-    position: relative; 
+    position: sticky; 
 }
 .logo{
     text-decoration: none;
@@ -58,17 +58,19 @@ span{
 .row{
     padding: 0 1%;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-around;
     position: relative;
-    margin-top: 5%;
+    margin-top: 0%;
 }
 .left-side-col{
+    display: inline;
     position: sticky;
     flex-basis: 40%;
     
 }
 .left-side-col img{
+    display: inline;
     position: sticky;
     padding: 0%;
     top: 10%;
