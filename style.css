@@ -64,21 +64,18 @@ span{
     margin-top: 5%;
 }
 .left-side-col{
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-    flex-basis: 50%;
+    position: sticky;
+    flex-basis: 40%;
     
 }
 .left-side-col img{
+    position: sticky;
     padding: 0%;
-    display: flex;
-    margin-top: auto;
-    align-items: normal;
-    width: 70%;
-    position: relative;
-    cursor: pointer;
+    top: 10%;
+    width: 80%;
     border-radius: 2px;
+    
+    
 }
 .right-side-col{
     flex-basis: 50%;
@@ -121,9 +118,12 @@ span{
     transition: transform 0.5s;
     transform: translateX(-8px);
 }
+
+
 .right-side-col h1{
     font-size: 55px;
     font-weight: bold;
+    
 }
 .right-side-col p{
     color: rgb #c4c7cd;
@@ -161,6 +161,11 @@ footer {
 }
 footer .icon {
 position: relative;
+justify-content: center; 
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
 
 }
   
