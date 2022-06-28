@@ -59,7 +59,7 @@ nav{
     width: 20%;
     height: 100%;
     position: absolute;
-    left: 0;
+    left: 10;
     top: 0;
     background: linear-gradient(rgb(72, 72, 72), turquoise);
 }
