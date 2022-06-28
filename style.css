@@ -5,9 +5,16 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-color: rgb(2, 2, 2);
+    background-image: url("/gridground2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    background-color: transparent;
     color: #c4c7cd;
-    position: sticky; 
+    position: relative; 
+}
+h3 {
+    font-size: 20pt;
+    color: rgb(242, 242, 242);
 }
 .logo{
     text-decoration: none;
@@ -17,6 +24,10 @@
     font-weight: bold;
     padding-top: 10px;
     padding-left: 10%;
+}
+p {
+    font-size: 15pt;
+    color: rgb(255, 255, 255);
 }
 nav{
     display: flex;
@@ -50,34 +61,39 @@ nav{
     position: absolute;
     left: 0;
     top: 0;
-    background: #394343;
+    background: linear-gradient(grey, turquoise);
 }
 span{
-    color: #fc0808;
+  font-size: 70px;
+  background: -webkit-linear-gradient(rgb(255, 1, 1), rgb(255, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .row{
     padding: 0 1%;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-around;
     position: relative;
-    margin-top: 0%;
+    margin-top: 5%;
 }
 .left-side-col{
-    display: inline;
-    position: sticky;
-    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    flex-basis: 50%;
+    
     
 }
 .left-side-col img{
-    display: inline;
-    position: sticky;
     padding: 0%;
-    top: 10%;
-    width: 80%;
+    display: flex;
+    margin-top: auto;
+    align-items: normal;
+    width: 70%;
+    position: relative;
+    cursor: pointer;
     border-radius: 2px;
-    
-    
 }
 .right-side-col{
     flex-basis: 50%;
@@ -120,12 +136,9 @@ span{
     transition: transform 0.5s;
     transform: translateX(-8px);
 }
-
-
 .right-side-col h1{
     font-size: 55px;
     font-weight: bold;
-    
 }
 .right-side-col p{
     color: rgb #c4c7cd;
@@ -155,20 +168,14 @@ span{
 }
 footer {
     text-align: center;
-    padding: 50px;
+    font-size: 15pt;
+    padding: 60px;
     align-items: center;
     justify-content: center; 
-    background-color: #394343;
+    background-color: rgb(89, 222, 209);
     color: white;
 }
 footer .icon {
 position: relative;
-justify-content: center; 
-padding: 15px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
 
 }
-  
-
