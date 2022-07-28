@@ -14,11 +14,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed; 
     background-color: transparent;
     color: #c4c7cd;
-    position: relative;  */
+    position: relative; 
 }
 .parallax{
     background-image: url(".vscode/images/gridground.jpg");
