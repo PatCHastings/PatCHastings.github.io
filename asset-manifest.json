@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.807bfffd.css",
-    "main.js": "/static/js/main.8b6f8e45.js",
+    "main.css": "/static/css/main.d3e4a5c6.css",
+    "main.js": "/static/js/main.4cdf581d.js",
     "static/js/592.75afdbc3.chunk.js": "/static/js/592.75afdbc3.chunk.js",
     "static/media/headshot2022bravodelta.jpg": "/static/media/headshot2022bravodelta.49c457e4ad74d4d23522.jpg",
     "index.html": "/index.html",
-    "main.807bfffd.css.map": "/static/css/main.807bfffd.css.map",
-    "main.8b6f8e45.js.map": "/static/js/main.8b6f8e45.js.map",
+    "main.d3e4a5c6.css.map": "/static/css/main.d3e4a5c6.css.map",
+    "main.4cdf581d.js.map": "/static/js/main.4cdf581d.js.map",
     "592.75afdbc3.chunk.js.map": "/static/js/592.75afdbc3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.807bfffd.css",
-    "static/js/main.8b6f8e45.js"
+    "static/css/main.d3e4a5c6.css",
+    "static/js/main.4cdf581d.js"
   ]
 }
