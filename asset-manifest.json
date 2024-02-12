@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/my-resume/static/css/main.ec43c864.css",
+    "main.js": "/my-resume/static/js/main.69a04f88.js",
+    "static/js/592.75afdbc3.chunk.js": "/my-resume/static/js/592.75afdbc3.chunk.js",
+    "static/media/headshot2022bravodelta.jpg": "/my-resume/static/media/headshot2022bravodelta.49c457e4ad74d4d23522.jpg",
+    "index.html": "/my-resume/index.html",
+    "main.ec43c864.css.map": "/my-resume/static/css/main.ec43c864.css.map",
+    "main.69a04f88.js.map": "/my-resume/static/js/main.69a04f88.js.map",
+    "592.75afdbc3.chunk.js.map": "/my-resume/static/js/592.75afdbc3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec43c864.css",
+    "static/js/main.69a04f88.js"
+  ]
+}
