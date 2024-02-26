@@ -2,7 +2,8 @@ import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Image from "next/image";
-import deved from "../public/headshot-transparent.png";
+import pat from "../public/headshot-transparent-small.png";
+import java from "../public/java-logo.png";
 
 export default function Home() {
   return (
@@ -42,8 +43,26 @@ export default function Home() {
             <AiFillLinkedin />
             <AiFillGithub />
           </div>
-          <div className="">
-            <Image src={deved} alt="headshot2022bravodelta" />
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500  w-80 h-80 mt-20">
+            <Image src={pat} layout="fill" objectFit="cover" />
+          </div>
+        </section>
+        <section>
+          <div>
+            <h3 className="text-3xl py-1">About Me</h3>
+            <p className="text-md py-2 leading-8 text-gray-80">
+              Passionate about solving problems and creating value through
+              technology, I blend 1.5+ years in Software Engineering with an
+              8-year foundation in mortgage banking. This journey has equipped
+              me with a unique perspective on adapting to change, innovating
+              under pressure, and understanding user needs.
+            </p>
+          </div>
+          <div>
+            <div className="text-center">
+              <h3 className="text-lg font-medium pt-8 pb-2">Technologies</h3>
+              <Image src={java} width={100} height={100} />
+            </div>
           </div>
         </section>
       </main>
