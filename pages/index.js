@@ -55,7 +55,7 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-1">About Me</h3>
+            <h3 className="text-center py-10 text-3xl">About Me</h3>
             <p className="text-md py-2 leading-8 text-gray-800">
               Passionate about solving problems and creating value through
               technology, I blend 1.5+ years in Software Engineering with an
@@ -66,7 +66,9 @@ export default function Home() {
           </div>
           <div>
             <div className="text-center">
-              <h3 className="text-lg font-medium pt-8 pb-2">Technologies</h3>
+              <h3 className="text-center p-10 text-lg font-medium pt-8 pb-5">
+                Technologies
+              </h3>
             </div>
             <div className="flex justify-center">
               <div
@@ -95,7 +97,7 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-10">Projects</h3>
+            <h3 className="text-center p-10 py-10 text-3xl">Projects</h3>
             <p className="text-md py-2 leading-8 text-gray-800">
               I have spent most of my time over the past year hard at work on
               internal Chase applications, which I cannot share. However, if you
