@@ -109,8 +109,8 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <div
-              className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-4 justify-center auto-rows-max mx-auto"
-              style={{ maxWidth: "3xl" }}
+              className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-4 justify-center auto-rows-max mx-auto"
+              style={{ maxWidth: "4xl" }}
             >
               {technologies.map((tech, index) => (
                 <InteractiveImage

@@ -14,7 +14,7 @@ const InteractiveImage = ({ src, alt, details }) => {
         onClick={toggleDetail}
       >
         <Image src={src} alt={alt} layout="responsive" />
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+        <div className="absolute inset-0 rounded-lg flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
           <span className="text-white text-sm">View Details</span>
         </div>
       </div>
