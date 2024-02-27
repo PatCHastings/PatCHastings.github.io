@@ -10,8 +10,45 @@ import python from "../public/python-logo.png";
 import sql from "../public/sql-logo.jpg";
 import ts from "../public/typescript-logo.png";
 import react from "../public/react-logo.png";
+import InteractiveImage from "./InteractiveImage";
 
 export default function Home() {
+  const technologies = [
+    { src: java, alt: "Java", details: "Java: Write once, run anywhere." },
+    {
+      src: csharp,
+      alt: "C#",
+      details: "C#: Powerful language for .NET development.",
+    },
+    {
+      src: ts,
+      alt: "TypeScript",
+      details: "TypeScript: JavaScript with syntax for types.",
+    },
+    {
+      src: react,
+      alt: "React",
+      details: "React: A JavaScript library for building user interfaces.",
+    },
+    {
+      src: js,
+      alt: "JavaScript",
+      details:
+        "JavaScript: High-level, often just-in-time compiled, and multi-paradigm.",
+    },
+    {
+      src: python,
+      alt: "Python",
+      details:
+        "Python: An interpreted, high-level and general-purpose programming language.",
+    },
+    {
+      src: sql,
+      alt: "SQL",
+      details:
+        "SQL: Domain-specific language used in programming and designed for managing data.",
+    },
+  ];
   return (
     <div>
       <Head>
@@ -64,34 +101,25 @@ export default function Home() {
               under pressure, and understanding user needs.
             </p>
           </div>
-          <div>
-            <div className="text-center">
-              <h3 className="text-center p-10 text-lg font-medium pt-8 pb-5">
-                Technologies
-              </h3>
-            </div>
-            <div className="flex justify-center">
-              <div
-                className="grid grid-flow-row auto-rows-max justify-center gap-4 max-w-4xl mx-auto"
-                style={{
-                  gridTemplateColumns: "repeat(auto-fit, minmax(1px, 1fr))",
-                }}
-              >
-                {[java, csharp, js, python, sql].map((src, index) => (
-                  <div key={index} className="shadow-lg rounded-xl">
-                    <div className="w-full h-full flex justify-center items-center">
-                      <Image
-                        src={src}
-                        alt={`Icon ${index}`}
-                        width={50} // This is now just for the Image component's aspect ratio
-                        height={50}
-                        objectFit="cover"
-                        className="rounded-xl"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+
+          <div className="text-center">
+            <h3 className="text-center p-10 text-lg font-medium pt-8 pb-5">
+              Technologies
+            </h3>
+          </div>
+          <div className="flex justify-center">
+            <div
+              className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-4 justify-center auto-rows-max mx-auto"
+              style={{ maxWidth: "3xl" }}
+            >
+              {technologies.map((tech, index) => (
+                <InteractiveImage
+                  key={index}
+                  src={tech.src}
+                  alt={tech.alt}
+                  details={tech.details}
+                />
+              ))}
             </div>
           </div>
         </section>
