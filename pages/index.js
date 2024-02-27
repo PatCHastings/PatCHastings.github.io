@@ -4,6 +4,12 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Image from "next/image";
 import pat from "../public/headshot-transparent-small.png";
 import java from "../public/java-logo.png";
+import csharp from "../public/csharp-logo.png";
+import js from "../public/Javascript-logo.png";
+import python from "../public/python-logo.png";
+import sql from "../public/sql-logo.jpg";
+import ts from "../public/typescript-logo.png";
+import react from "../public/react-logo.png";
 
 export default function Home() {
   return (
@@ -14,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-white px-10">
+      <main className="bg-white-200 px-10">
         <section>
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl font-jetbrains">developed by Patrick</h1>
@@ -50,7 +56,7 @@ export default function Home() {
         <section>
           <div>
             <h3 className="text-3xl py-1">About Me</h3>
-            <p className="text-md py-2 leading-8 text-gray-80">
+            <p className="text-md py-2 leading-8 text-gray-800">
               Passionate about solving problems and creating value through
               technology, I blend 1.5+ years in Software Engineering with an
               8-year foundation in mortgage banking. This journey has equipped
@@ -61,8 +67,41 @@ export default function Home() {
           <div>
             <div className="text-center">
               <h3 className="text-lg font-medium pt-8 pb-2">Technologies</h3>
-              <Image src={java} width={100} height={100} />
             </div>
+            <div className="flex justify-center">
+              <div
+                className="grid grid-flow-row auto-rows-max justify-center gap-4 max-w-4xl mx-auto"
+                style={{
+                  gridTemplateColumns: "repeat(auto-fit, minmax(1px, 1fr))",
+                }}
+              >
+                {[java, csharp, js, python, sql].map((src, index) => (
+                  <div key={index} className="shadow-lg rounded-xl">
+                    <div className="w-full h-full flex justify-center items-center">
+                      <Image
+                        src={src}
+                        alt={`Icon ${index}`}
+                        width={50} // This is now just for the Image component's aspect ratio
+                        height={50}
+                        objectFit="cover"
+                        className="rounded-xl"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <h3 className="text-3xl py-10">Projects</h3>
+            <p className="text-md py-2 leading-8 text-gray-800">
+              I have spent most of my time over the past year hard at work on
+              internal Chase applications, which I cannot share. However, if you
+              click on the languages above, I will be happy to explain the
+              involvement of each and my future goals
+            </p>
           </div>
         </section>
       </main>
