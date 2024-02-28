@@ -1,8 +1,11 @@
 .container {
   padding: 0 2rem;
+  z-index: 2;
 }
 
 .main {
+  position: relative;
+  z-index: 2;
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -11,9 +14,14 @@
   justify-content: center;
   align-items: center;
 }
-
+.main-content {
+  position: relative;
+  z-index: 2;
+  /* Other styles as needed */
+}
 .footer {
   display: flex;
+  z-index: 2;
   flex: 1;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
@@ -22,6 +30,7 @@
 }
 
 .footer a {
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
