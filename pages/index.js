@@ -18,7 +18,8 @@ export default function Home() {
     {
       src: csharp,
       alt: "C#",
-      details: "C#: Powerful language for .NET development.",
+      details:
+        "C#: The main application I support is written in C# and consists of dozens of classes that deal with the routing logic for mortgage documents.",
     },
     {
       src: ts,
@@ -109,7 +110,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <div
-              className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-4 justify-center auto-rows-max mx-auto"
+              className="relative grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-4 justify-center auto-rows-max mx-auto"
               style={{ maxWidth: "4xl" }}
             >
               {technologies.map((tech, index) => (
