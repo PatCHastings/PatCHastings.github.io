@@ -135,4 +135,30 @@
   .logo img {
     filter: invert(1);
   }
+
+  .detailBox {
+    font-family: "Consolas", "Courier New", monospace;
+    background-color: #012456; /* PowerShell background color */
+    color: #ffffff; /* Default text color */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .detailText {
+    color: #4ec9b0; /* Example color for text, similar to PowerShell theming */
+  }
+
+  /* Additional styling for specific parts if you can separate them */
+  .command {
+    color: #e47e2b; /* Blue for commands */
+  }
+
+  .parameter {
+    color: #19dfe6; /* Lighter blue for parameters */
+  }
+
+  .string {
+    color: #6d3edb; /* Orange for strings */
+  }
 }

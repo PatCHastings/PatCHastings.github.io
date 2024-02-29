@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import styles from "/styles/Home.module.css";
 
 const InteractiveImage = ({ src, alt, details }) => {
   const [isDetailOpen, setIsDetailOpen] = useState(false);
@@ -7,7 +8,7 @@ const InteractiveImage = ({ src, alt, details }) => {
   const toggleDetail = () => setIsDetailOpen(!isDetailOpen);
 
   // Adjusted detail box className for animation
-  let detailBoxClass = `fixed inset-0 z-50 bg-gray-500 rounded-lg bg-opacity-90 p-4 flex flex-col items-center justify-center transition-all duration-300 ease-in-out ${
+  let detailBoxClass = `detailBox fixed inset-0 z-50 bg-gray-500 rounded-lg bg-opacity-90 p-4 flex flex-col items-center justify-center transition-all duration-300 ease-in-out ${
     isDetailOpen ? "scale-50 opacity-90" : "scale-0 opacity-0"
   }`;
 
@@ -29,8 +30,8 @@ const InteractiveImage = ({ src, alt, details }) => {
       </div>
 
       {/* Detail Box */}
-      <div className={detailBoxClass}>
-        <p>{details}</p>
+      <div className={`${styles.detailBox}  ${detailBoxClass}`}>
+        <p className="detailText text-3xl">{details}</p>
         <button
           className="mt-4 px-4 py-2"
           onClick={(e) => {
