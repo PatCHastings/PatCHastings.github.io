@@ -10,9 +10,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // backgroundImage: (theme) => ({
-      //   "parallax": "url('../public/rolling-hills.jpg')",
-      // }),
       fontFamily: {
         jetbrains: ['JetBrainsMono', 'monospace'],
       },
