@@ -1,0 +1,99 @@
+.hero {
+    height: calc(100vh - 100px);
+    // overflow: hidden;
+    // background: linear-gradient(45deg, rgba(0, 255, 42, 0.534), rgb(255, 72, 0));
+    position: relative;
+    background-attachment: fixed;
+
+    .wrapper {
+        max-width: 50%; 
+        height: 100%;
+        margin: auto;
+
+        .textContainer {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+
+            h2 {
+                font-size: 30px;
+                color: rgb(42, 255, 234);
+                letter-spacing: 10px;
+            }
+
+            h1 {
+                font-size: 100px;
+                color: white;
+                letter-spacing: 10px;
+            }
+
+            .buttons {
+                display: flex;
+                gap: 20px;
+                
+
+                button {
+                    padding: 20px;
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    color: white;
+                    cursor: pointer;
+                    font-weight: 300;
+                    
+                }
+
+            }
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+    
+    
+    .imageContainer {
+        
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 0%;
+        
+        img {
+            
+            height: 800px;
+            transform: scaleX(-1);
+
+        }
+    }
+
+    .slidingTextContainer {
+        position: absolute;
+        font-size: 50vh;
+        bottom: -120px;
+        white-space: nowrap;
+        color: rgba(47, 30, 63, 0.205);
+
+
+        // .slidingText {
+        //     display: flex;
+        //     gap: 20px;
+        //     animation: slide 10s linear infinite;
+        // }
+
+        // @keyframes slide {
+        //     0% {
+        //         transform: translateX(0);
+        //     }
+        //     100% {
+        //         transform: translateX(-100%);
+        //     }
+        // }
+    }   
+
+    
+}
