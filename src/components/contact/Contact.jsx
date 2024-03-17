@@ -14,7 +14,6 @@ const Contact = () => {
           <span>phastings82@gmail.com</span>
         </div>
       </div>
-
       <div className="formContainer"></div>
       <form>
         <input type="text" required placeholder="Name" />
