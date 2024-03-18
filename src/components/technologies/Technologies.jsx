@@ -79,7 +79,7 @@ const Technologies = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          Methodical mind resolved to solve; <br /> a producer of solutions.
+          Methodical mind resolved to solve <br />
         </p>
         <hr />
       </motion.div>
@@ -116,8 +116,8 @@ const Technologies = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
           >
-            <h2>{selectedTech.name}</h2>
-            <p>{selectedTech.description}</p>
+            <h2>{selectedTech.alt}</h2>
+            <p>{selectedTech.details}</p>
             <button onClick={() => setSelectedTech(null)}>Close</button>
           </motion.div>
         )}

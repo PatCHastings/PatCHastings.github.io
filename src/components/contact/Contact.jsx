@@ -14,13 +14,14 @@ const Contact = () => {
           <span>phastings82@gmail.com</span>
         </div>
       </div>
-      <div className="formContainer"></div>
-      <form>
-        <input type="text" required placeholder="Name" />
-        <input type="email" required placeholder="Name" />
-        <textarea rows={8} placeholder="Message" />
-        <button></button>
-      </form>
+      <div className="formContainer">
+        <form>
+          <input type="text" required placeholder="Name" name="name" />
+          <input type="email" required placeholder="Email" name="email" />
+          <textarea rows={8} placeholder="Message" name="message" />
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
   );
 };
