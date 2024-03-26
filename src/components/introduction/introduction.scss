@@ -1,19 +1,37 @@
-.aboutMe {
-    
-    
-    color: #fff;
-    font-weight: 300;
-    line-height: 1.5;
-    
-    h2 {
-        font-size: 1.5rem;
-        padding: 10%;
-        text-align: center;
+.introduction {
+    .topBar {
+      text-align: center;
+      margin: 20px; // Adjust as needed
+      
+      h1 {
+        // Styling for the top bar text
+      }
     }
-    h3 {
-        font-size: 1rem;
-        padding: 10%;
-        text-align: center;
+  
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px; // Adjust the space between columns as needed
+      max-width: 1380px;
+      
+      .leftColumn, .rightColumn {
+        flex: 1; // Makes both columns take up equal space
+  
+        h2 {
+          // Styling for column headings
+          text-align: center;
+          color: white;
+        }
+  
+        pre {
+          // Styling for the typed text, if you want to customize it further
+          background-color: #4141415e; // Example styling
+          color: rgb(0, 255, 221);
+          text-align: center;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid rgb(0, 255, 255);
+        }
+      }
     }
-    
-}
+  }
