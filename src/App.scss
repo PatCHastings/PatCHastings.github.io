@@ -4,6 +4,17 @@
     box-sizing: border-box; 
     font-family: 'JetBrains Mono', monospace;
 }
+.parallaxBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; /* Ensure it's behind content but above the body background */
+    /* Dynamically adjust the height or set it to a high enough value */
+    height: 200vh; /* Example: enough to cover Hero and Introduction */
+    overflow: hidden;
+  }
+
 
 // html {
 //     scroll-snap-type: y mandatory;
@@ -11,8 +22,8 @@
 // }
 
 body {
-    background: linear-gradient(180deg, rgb(34, 33, 33), rgb(11, 185, 171));
-    color: white;
+    background: linear-gradient(45deg, rgb(73, 75, 75), rgb(73, 75, 75));
+    //color: white;
     
 }
 
@@ -26,4 +37,21 @@ section {
     scroll-snap-align: center;
 }
 
+@mixin mobile {
+    @media (max-width: 738px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: 1366px) {
+        @content;
+    }
+}
 

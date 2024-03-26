@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const variants = {
   initial: {
-    x: -500,
+    x: 0,
     y: 100,
     opacity: 0,
   },
@@ -13,8 +13,8 @@ const variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
-      staggerChildren: 0.1,
+      duration: 0.5,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -91,7 +91,7 @@ const Technologies = () => {
           </h1>
         </div>
       </motion.div>
-      <motion.div className="listContainer">
+      <motion.div className="listContainer" variants={variants}>
         {technologies.map((tech) => (
           <motion.div
             key={tech.name}
@@ -101,7 +101,7 @@ const Technologies = () => {
             onClick={() => setSelectedTech(tech)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
           >
             <img src={tech.src} alt={tech.name} />
             <h2>{tech.name}</h2>

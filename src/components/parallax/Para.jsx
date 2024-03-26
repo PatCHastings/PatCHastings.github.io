@@ -13,11 +13,34 @@ const Parallax = ({ type, toggleSection }) => {
 
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "90%"]);
-  const yBgMid = useTransform(scrollYProgress, [0, 1], ["10%", "60%"]);
-  const yBgMax = useTransform(scrollYProgress, [0, 1], ["30%", "0%"]);
+  const yBgMid = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
+  const yBgMax = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <div className="parallax" ref={ref}>
+    <div
+      className="parallax"
+      ref={ref}
+      style={{
+        background:
+          type === "technologies"
+            ? "linear-gradient(180deg, rgb(22, 112, 248), rgb(183, 236, 245))"
+            : "linear-gradient(180deg, rgb(22, 112, 248), rgb(0, 37, 94)",
+      }}
+    >
+      {type === "technologies" && <Snowfall />}
+      <motion.h1 style={{ y: yText }}>
+        {type === "technologies" ? "Front End" : "Back End"}
+      </motion.h1>
+      <motion.div
+        className="clouds"
+        style={{
+          y: yBg,
+          backgroundImage: `url(${
+            type === "technologies" ? "/4mountain.png" : "/sun.png"
+          })`,
+        }}
+      ></motion.div>{" "}
+      */}
       <motion.div
         className="mountainFar"
         style={{

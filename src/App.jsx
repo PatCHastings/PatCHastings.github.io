@@ -6,6 +6,10 @@ import Technologies from "./components/technologies/Technologies";
 import Snowfall from "react-snowfall";
 import SmoothScroll from "./components/smoothScroll/SmoothScroll";
 import Contact from "./components/contact/Contact";
+import Testimonials from "./components/testimonials/Testimonials";
+import Introduction from "./components/introduction/Introduction";
+
+//import TestimonialCarousel from "./components/carousel/TestimonialCarousel";
 
 const App = () => {
   return (
@@ -20,21 +24,23 @@ const App = () => {
           "Contact",
         ]}
       />
+      <div className="parallaxBackground">
+        <Parallax type="Technologies" />
+      </div>
       <section id="Homepage">
         <Navbar />
         <Hero />
       </section>
       <section id="Introduction">
-        <Parallax type="technologies" />
+        <Introduction />
       </section>
       <section id="Technologies">
         <Technologies />
       </section>
-      {/* <section id="Portfolio">
-        <Parallax type="portfolio" />
-      </section> */}
       <section id="Portfolio">Portfolio</section>
-      <section id="Testimonials">Testimonials</section>
+      <section id="Testimonials">
+        <Testimonials />
+      </section>
       <section id="Contact">
         <Contact />
       </section>

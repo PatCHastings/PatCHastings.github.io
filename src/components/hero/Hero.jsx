@@ -1,3 +1,4 @@
+import Parallax from "../parallax/parallax.jsx";
 import "./hero.scss";
 import { motion } from "framer-motion";
 
@@ -62,7 +63,9 @@ const Hero = () => {
             <motion.button variants={textVariants}>
               View what Ive created
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button variants={textVariants} whileTap={{ scale: 0.85 }}>
+              Contact Me
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -71,16 +74,19 @@ const Hero = () => {
             alt=""
           />
         </motion.div>
+        <Parallax type="Technologies" />
       </div>
       {/* <motion.div
         className="slidingTextContainer"
         variants={sliderVariants}
         initial="initial"
         animate="animate"
-      >
+        >
         <img src="" alt="" />
       </motion.div> */}
-      <div className="background"></div>
+      {/* <div className="background">
+        <Parallax type="Technologies" />
+      </div> */}
       <div className="imageContainer">
         <img src="/hero.png" alt="Hero" />
       </div>

@@ -14,17 +14,21 @@ const Navbar = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-        >
-          Portfolio
-        </motion.span>
-        <div className="social">
-          <a href="#">
+        ></motion.span>
+        <motion.div className="social">
+          <motion.a
+            href="https://www.linkedin.com/in/PatCHastings"
+            whileHover={{ scale: 1.1 }}
+          >
             <img src="/linkedinwhite.png" alt="" />
-          </a>
-          <a href="#">
+          </motion.a>
+          <motion.a
+            href="https://patchastings.github.io/"
+            whileHover={{ scale: 1.1 }}
+          >
             <img src="/Github-Logo.png" alt="" />
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </div>
     </div>
   );

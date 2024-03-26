@@ -1,14 +1,28 @@
+@import "../../app.scss";
+
 .hero {
-    height: calc(100vh - 100px);
-    // overflow: hidden;
-    // background: linear-gradient(45deg, rgba(0, 255, 42, 0.534), rgb(255, 72, 0));
-    position: relative;
-    background-attachment: fixed;
+  position: relative;
+  height: calc(100vh - 100px);
+  overflow: hidden; /* This might be necessary depending on your design */
+  background-attachment: fixed;
+     
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 
     .wrapper {
+        position: relative;
         max-width: 50%; 
         height: 100%;
         margin: auto;
+        z-index: 1;
+        
 
         .textContainer {
             width: 50%;
@@ -17,6 +31,10 @@
             flex-direction: column;
             justify-content: center;
             gap: 40px;
+
+           
+
+            
 
             h2 {
                 font-size: 30px;
@@ -28,11 +46,20 @@
                 font-size: 100px;
                 color: white;
                 letter-spacing: 10px;
+
+                @include mobile {
+                    font-size: 36px;
+                  }
             }
 
             .buttons {
                 display: flex;
                 gap: 20px;
+
+                @include mobile {
+                    flex-direction: column;
+                    
+                  }
                 
 
                 button {
@@ -63,10 +90,16 @@
         right: 0;
         margin-right: 0%;
         
+        
         img {
             
             height: 800px;
             transform: scaleX(-1);
+
+            @include mobile {
+                height: 400px;
+                bottom: 0%;
+              }
 
         }
     }
