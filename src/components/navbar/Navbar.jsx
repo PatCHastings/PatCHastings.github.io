@@ -16,18 +16,22 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
         ></motion.span>
         <motion.div className="social">
-          <motion.a
-            href="https://www.linkedin.com/in/PatCHastings"
-            whileHover={{ scale: 1.1 }}
-          >
-            <img src="/linkedinwhite.png" alt="" />
-          </motion.a>
-          <motion.a
-            href="https://patchastings.github.io/"
-            whileHover={{ scale: 1.1 }}
-          >
-            <img src="/Github-Logo.png" alt="" />
-          </motion.a>
+          <a href="https://www.linkedin.com/in/PatCHastings">
+            <motion.img
+              src="/linkedinwhite.png"
+              alt=""
+              initial={{ scale: 0.9 }}
+              whileHover={{ scale: 1.1 }}
+            />
+          </a>
+          <a href="https://patchastings.github.io/">
+            <motion.img
+              src="/Github-Logo.png"
+              alt=""
+              initial={{ scale: 0.9 }}
+              whileHover={{ scale: 1.1 }}
+            />
+          </a>
         </motion.div>
       </div>
     </div>

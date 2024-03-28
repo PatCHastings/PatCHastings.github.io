@@ -8,7 +8,6 @@ import SmoothScroll from "./components/smoothScroll/SmoothScroll";
 import Contact from "./components/contact/Contact";
 import Testimonials from "./components/testimonials/Testimonials";
 import Introduction from "./components/introduction/Introduction";
-
 //import TestimonialCarousel from "./components/carousel/TestimonialCarousel";
 
 const App = () => {
@@ -38,6 +37,9 @@ const App = () => {
         <Technologies />
       </section>
       <section id="Portfolio">Portfolio</section>
+      <div className="parallaxBackground">
+        <Parallax type="Technologies" />
+      </div>
       <section id="Testimonials">
         <Testimonials />
       </section>

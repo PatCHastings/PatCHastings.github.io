@@ -1,76 +1,74 @@
-body {
-    background-color: #000000;
-  }
+@import "../../app.scss";
+
+.testimonials {
+    height: 100vh;
+
+    @include mobile {
+      height: 50vh;
+    }
   
-  .main {
-    margin-top: 10%;
-    display: flex;
-    justify-content: center;
-  }
+    .topBar {
+        color: white;
+      text-align: center;
+      justify-content: center;
+      
+      margin: 30px;
+      padding: 30px;
+    }
   
-  .mySwiper {
-    width: 80%;
-    display: flex; // Ensure items are displayed inline
-    overflow-x: auto; // Allow horizontal scrolling
-  }
+    .columns {
+      display: flex;
+      justify-content: space-around;
+      background-color: rgba(0, 0, 0, 0.432);
+      
   
-  .swiper-slide {
-    min-width: 200px; // Use min-width to ensure flex items do not shrink
-    background-color: transparent;
-    border-radius: 10px;
-    color: #ffffff;
-    margin: 0 10px; // Add some space between items
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Courier New", Courier, monospace;
-  }
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: calc(33.333% - 40px);
+        margin: 20px;
+        max-width: 400px; // Set a max-width for each column
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: rgba(0, 242, 250, 0.397);
+        border-radius: 10px;
   
-  .testimonials-profile-circle {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-  }
+        img.testimonial-avatar {
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          margin-bottom: 15px;
+        }
   
-  .testimonial-avatar {
-    width: 100px;
-    height: 100px;
-    border: 3px solid #1d8ba0;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+        h2, h3 {
+            color: white;
+          text-align: center;
+          margin-bottom: 15px;
+        }
   
-  .review-by {
-    color: #ebad04;
-    font-size: 18px;
-  }
+        pre {
+            color: white;
+            width: 100%; // Ensure the <pre> tag fills the column width
+            white-space: pre-wrap; // Allow wrapping of text
+            word-wrap: break-word; // Break words to prevent overflow
+            text-align: left;
+            overflow-wrap: break-word; // Ensures long words don't overflow
+            margin-bottom: 15px;
+            max-width: 100%; //
+        }
+      }
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        
   
-  .head, .head-p {
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    font-family: "Courier New", Courier, monospace;
-  }
-  
-  .head {
-    font-size: 2.5em;
-  }
-  
-  .head-p {
-    font-size: 1em;
-  }
-  
-  /* Swiper pagination styles adjusted as needed */
-  .swiper-pagination-bullet-active, .swiper-pagination-bullet {
-    background-color: #ffffff;
-    border: 2px solid #1d8ba0;
-    border-radius: 1px;
-    width: 30px;
-    height: 1px;
+        .column {
+          max-width: 90%;
+        }
+    }
+    }
   }
   

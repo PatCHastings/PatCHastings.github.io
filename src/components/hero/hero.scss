@@ -1,9 +1,9 @@
-@import "../../app.scss";
+@import "../../App.scss";
 
 .hero {
   position: relative;
   height: calc(100vh - 100px);
-  overflow: hidden; /* This might be necessary depending on your design */
+  overflow: hidden; 
   background-attachment: fixed;
      
 
@@ -17,11 +17,9 @@
   }
 
     .wrapper {
-        position: relative;
-        max-width: 50%; 
-        height: 100%;
-        margin: auto;
-        z-index: 1;
+         max-width: 1366px;
+    height: 100%;
+    margin: auto;
         
 
         .textContainer {
@@ -98,7 +96,6 @@
 
             @include mobile {
                 height: 400px;
-                bottom: 0%;
               }
 
         }

@@ -2,6 +2,7 @@ import "./introduction.scss";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import typingFX from "../../hooks/TypingFX";
+import IDEContainer from "../IDEcontainer/IDEcontainer";
 
 const Introduction = () => {
   const typedTextLeft = typingFX(
@@ -9,6 +10,9 @@ const Introduction = () => {
   );
   const typedTextRight = typingFX(
     "And this text is for the right column.\nExplore more here."
+  );
+  const typedTextAboutMe = typingFX(
+    "Hello! I have been coding professionally for over 1.5 years, and I love what I do!"
   );
 
   const variants = {
@@ -27,9 +31,20 @@ const Introduction = () => {
         >
           Introduction
         </motion.h1>
+        <div className="App">
+          <IDEContainer>
+            <p>// About Me</p>
+            <p>
+              console.log('Hello! I have been coding professionally for over 1.5
+              years, and I love what I do! ');
+            </p>
+            <pre>{typedTextAboutMe}</pre>
+            {/* Add more content as needed */}
+          </IDEContainer>
+        </div>
       </div>
       <div className="columns">
-        <motion.div
+        <motion.div // add clipPath for left side and css to contain it
           className="leftColumn"
           variants={variants}
           initial="hidden"
@@ -39,7 +54,7 @@ const Introduction = () => {
           <h2>Left Column Heading</h2>
           <pre>{typedTextLeft}</pre>
         </motion.div>
-        <motion.div
+        <motion.div // add clipPath for right side
           className="rightColumn"
           variants={variants}
           initial="hidden"

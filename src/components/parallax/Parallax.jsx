@@ -1,7 +1,6 @@
 import "./parallax.scss";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Snowfall from "react-snowfall";
 
 const Parallax = ({ type, toggleSection }) => {
   const ref = useRef();

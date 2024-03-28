@@ -1,6 +1,16 @@
 import "./technologies.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import {
+  Csharp,
+  Java,
+  Javascript,
+  Python,
+  Sql,
+  Spring,
+  ReactIcon,
+  Typescript,
+} from "../svgLogos";
 
 const variants = {
   initial: {
@@ -21,46 +31,54 @@ const variants = {
 
 const technologies = [
   {
-    src: "/java-logo.png",
+    //src: "/java-logo.png",
+    Component: Java,
     alt: "Java",
     details: "Java: Write once, run anywhere.",
   },
   {
-    src: "/csharp-logo.png",
+    //src: "/csharp-logo.png",
+    Component: Csharp,
     alt: "C#",
     details:
       "C#: Capture-Codemodule-MX: network of custom code modules built to handle intake and processing of mortgage documents. I spear-headed the clean-code initiative to bring this large repository",
   },
   {
-    src: "/javascript-logo.png",
+    //src: "/javascript-logo.png",
+    Component: Javascript,
     alt: "JavaScript",
     details:
       "JavaScript: High-level, often just-in-time compiled, and multi-paradigm.",
   },
   {
-    src: "/python-logo.png",
+    //src: "/python-logo.png",
+    Component: Python,
     alt: "Python",
     details:
       "Python: An interpreted, high-level and general-purpose programming language.",
   },
   {
-    src: "/sql-logo.jpg",
+    //src: "/sql-logo.jpg",
+    Component: Sql,
     alt: "SQL",
     details:
       "SQL: Domain-specific language used in programming and designed for managing data.",
   },
   {
-    src: "/typescript-logo.png",
+    //src: "/typescript-logo.png",
+    Component: Typescript,
     alt: "TypeScript",
     details: "TypeScript: JavaScript with syntax for types.",
   },
   {
-    src: "/react-logo.png",
+    //src: "/react-logo.png",
+    Component: ReactIcon,
     alt: "React",
     details: "React: A JavaScript library for building user interfaces.",
   },
   {
-    src: "/spring-logo.png",
+    //src: "/spring-logo.png",
+    Component: Spring,
     alt: "Spring",
     details: "Spring Boot: Java framework for creating micro services.",
   },
@@ -79,7 +97,7 @@ const Technologies = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          Methodical mind resolved to solve <br />
+          Methodical mind resolved to solve; <br /> a producer of solutions.
         </p>
         <hr />
       </motion.div>
@@ -91,10 +109,10 @@ const Technologies = () => {
           </h1>
         </div>
       </motion.div>
-      <motion.div className="listContainer" variants={variants}>
-        {technologies.map((tech) => (
+      <motion.div className="listContainer">
+        {technologies.map((tech, index) => (
           <motion.div
-            key={tech.name}
+            key={index}
             className="techIconContainer"
             variants={variants}
             whileHover={{ scale: 1.1 }}
@@ -103,8 +121,8 @@ const Technologies = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
           >
-            <img src={tech.src} alt={tech.name} />
-            <h2>{tech.name}</h2>
+            <tech.Component />
+            <h2>{tech.alt}</h2>
           </motion.div>
         ))}
       </motion.div>
