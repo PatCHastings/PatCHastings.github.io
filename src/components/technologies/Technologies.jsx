@@ -122,7 +122,6 @@ const Technologies = () => {
             transition={{ duration: 0.3 }}
           >
             <tech.Component />
-            <h2>{tech.alt}</h2>
           </motion.div>
         ))}
       </motion.div>

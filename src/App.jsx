@@ -3,12 +3,10 @@ import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/parallax";
 import Technologies from "./components/technologies/Technologies";
-import Snowfall from "react-snowfall";
 import SmoothScroll from "./components/smoothScroll/SmoothScroll";
 import Contact from "./components/contact/Contact";
 import Testimonials from "./components/testimonials/Testimonials";
 import Introduction from "./components/introduction/Introduction";
-//import TestimonialCarousel from "./components/carousel/TestimonialCarousel";
 
 const App = () => {
   return (
@@ -37,10 +35,11 @@ const App = () => {
         <Technologies />
       </section>
       <section id="Portfolio">Portfolio</section>
-      <div className="parallaxBackground">
-        <Parallax type="Technologies" />
+      <div className="parallaxBackgroundTwo">
+        <Parallax type="upsidedown" />
       </div>
       <section id="Testimonials">
+        {/* add parallax that goes into contact */}
         <Testimonials />
       </section>
       <section id="Contact">

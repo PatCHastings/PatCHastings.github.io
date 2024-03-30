@@ -1,16 +1,13 @@
 import "./introduction.scss";
 import React, { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import typingFX from "../../hooks/TypingFX";
 import IDEContainer from "../IDEcontainer/IDEcontainer";
 
 const Introduction = () => {
-  const typedTextLeft = typingFX(
-    "This is the left column text.\nHere's some more detail."
-  );
-  const typedTextRight = typingFX(
-    "And this text is for the right column.\nExplore more here."
-  );
+  const [showIDE, setShowIDE] = useState(false);
+
   const typedTextAboutMe = typingFX(
     "Hello! I have been coding professionally for over 1.5 years, and I love what I do!"
   );
@@ -29,21 +26,29 @@ const Introduction = () => {
           whileInView="visible"
           transition={{ duration: 1 }}
         >
-          Introduction
+          make the app appear onClick from desktop icon.
         </motion.h1>
-        <div className="App">
-          <IDEContainer>
-            <p>// About Me</p>
-            <p>
-              console.log('Hello! I have been coding professionally for over 1.5
-              years, and I love what I do! ');
-            </p>
-            <pre>{typedTextAboutMe}</pre>
-            {/* Add more content as needed */}
-          </IDEContainer>
+        <div className="ide-wrapper">
+          <button className="open-ide-button" onClick={() => setShowIDE(true)}>
+            <img src="../../public/mycomputer.png" alt="Open IDE" />
+            <p>about_me</p>
+          </button>
+          <AnimatePresence>
+            {showIDE && (
+              <IDEContainer onClose={() => setShowIDE(false)}>
+                <p>// About_Me</p>
+                <p>
+                  console.log('Hello! I have been coding professionally for over
+                  1.5 years, and I love what I do! ');
+                </p>
+                <pre>{typedTextAboutMe}</pre>
+                {/* Add more content as needed */}
+              </IDEContainer>
+            )}
+          </AnimatePresence>
         </div>
       </div>
-      <div className="columns">
+      {/* <div className="columns">
         <motion.div // add clipPath for left side and css to contain it
           className="leftColumn"
           variants={variants}
@@ -64,7 +69,7 @@ const Introduction = () => {
           <h2>Right Column Heading</h2>
           <pre>{typedTextRight}</pre>
         </motion.div>
-      </div>
+      </div> */}
     </div>
   );
 };

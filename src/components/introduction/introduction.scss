@@ -1,4 +1,5 @@
 @import "../../App.scss";
+@import "../../styles/mixins.scss";
 
 .introduction {
     
@@ -17,38 +18,62 @@
         color: white;
       }
     }
+    .ide-wrapper {
+        position: relative;
+        
+
+        @include mobile {
+            max-width: 700px;
+        }
+    }
+    .open-ide-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+
+        p {
+            margin-top: 0px; 
+            color: white;
+            font-size: 15px;
+        }
+
+        img {
+            width: 100px;
+        }
+    }
   
-    .columns {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    // .columns {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
       
-      gap: 20px; // Adjust the space between columns as needed
+    //   gap: 20px; // Adjust the space between columns as needed
       
 
-      @include mobile {
-        align-items: center;
-      }
+    //   @include mobile {
+    //     align-items: center;
+    //   }
       
-      .leftColumn, .rightColumn {
-        flex: 1; // Makes both columns take up equal space
+    //   .leftColumn, .rightColumn {
+    //     flex: 1; // Makes both columns take up equal space
   
-        h2 {
-          // Styling for column headings
-          text-align: center;
-          color: rgb(255, 255, 255);
-        }
+    //     h2 {
+    //       // Styling for column headings
+    //       text-align: center;
+    //       color: rgb(255, 255, 255);
+    //     }
   
-        pre {
-          // Styling for the typed text, if you want to customize it further
-          background-color: #4141415e; // Example styling
-          color: rgb(0, 255, 221);
-          text-align: center;
-          padding: 10px;
-          border-radius: 5px;
-          border: 1px solid rgb(0, 255, 255);
-          max-width: fit-content;
-        }
-      }
-    }
+    //     pre {
+    //       // Styling for the typed text, if you want to customize it further
+    //       background-color: #4141415e; // Example styling
+    //       color: rgb(0, 255, 221);
+    //       text-align: center;
+    //       padding: 10px;
+    //       border-radius: 5px;
+    //       border: 1px solid rgb(0, 255, 255);
+    //       max-width: fit-content;
+    //     }
+    //   }
+    // }
   }

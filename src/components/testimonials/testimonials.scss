@@ -1,11 +1,7 @@
 @import "../../app.scss";
 
 .testimonials {
-    height: 100vh;
-
-    @include mobile {
-      height: 50vh;
-    }
+    position: relative;
   
     .topBar {
         color: white;
@@ -31,7 +27,7 @@
         max-width: 400px; // Set a max-width for each column
         padding: 20px;
         box-sizing: border-box;
-        background-color: rgba(0, 242, 250, 0.397);
+        background-color: rgba(0, 0, 0, 0.397);
         border-radius: 10px;
   
         img.testimonial-avatar {

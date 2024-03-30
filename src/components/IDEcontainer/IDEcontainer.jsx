@@ -1,22 +1,27 @@
-import React, { useState } from "react";
+// IDEContainer.jsx
+import React from "react";
+import { motion } from "framer-motion";
 import "./IDEContainer.scss";
 
-const IDEContainer = ({ children }) => {
-  const [isVisible, setIsVisible] = useState(true);
+const IDEContainer = ({ onClose, children }) => {
   const lineNumbers = Array.from({ length: 20 }, (_, i) => i + 1);
 
-  if (!isVisible) return null;
-
   return (
-    <div className="ide-container">
+    <motion.div
+      className="ide-container"
+      initial={{ scale: 0, rotate: 5, opacity: 0 }}
+      animate={{ scale: 1, rotate: 0, opacity: 1 }}
+      exit={{ scale: 0, rotate: -5, opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="ide-header">
         <div className="ide-tabs">
           <button className="ide-tab active">Tab 1</button>
           <button className="ide-tab">Tab 2</button>
           {/* Add more tabs as needed */}
         </div>
-        <button className="ide-close" onClick={() => setIsVisible(false)}>
-          X
+        <button className="ide-close" onClick={onClose}>
+          x
         </button>
       </div>
       <div className="ide-content">
@@ -29,7 +34,7 @@ const IDEContainer = ({ children }) => {
         </div>
         <div className="ide-main-content">{children}</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
