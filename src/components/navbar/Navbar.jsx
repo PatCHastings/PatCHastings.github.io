@@ -20,16 +20,16 @@ const Navbar = () => {
             <motion.img
               src="/linkedinwhite.png"
               alt=""
-              initial={{ scale: 0.9 }}
-              whileHover={{ scale: 1.1 }}
+              initial={{ scale: 0.7 }}
+              whileHover={{ scale: 0.9 }}
             />
           </a>
-          <a href="https://patchastings.github.io/">
+          <a href="https://github.com/PatCHastings">
             <motion.img
               src="/Github-Logo.png"
               alt=""
-              initial={{ scale: 0.9 }}
-              whileHover={{ scale: 1.1 }}
+              initial={{ scale: 0.7 }}
+              whileHover={{ scale: 0.9 }}
             />
           </a>
         </motion.div>

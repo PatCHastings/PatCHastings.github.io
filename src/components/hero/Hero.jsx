@@ -1,6 +1,7 @@
-import Parallax from "../parallax/parallax.jsx";
+import Parallax from "../parallax/Parallax.jsx";
 import "./hero.scss";
 import { motion } from "framer-motion";
+import Links from "../sidebar/links/Links.jsx";
 
 const textVariants = {
   initial: {
@@ -25,26 +26,13 @@ const textVariants = {
   },
 };
 
-const sliderVariants = {
-  initial: {
-    x: 0,
-  },
-  animate: {
-    x: "-220%",
-    transition: {
-      repeat: Infinity,
-      repeatType: "mirror",
-      duration: 20,
-    },
-  },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
-  },
+const navigateToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  } else {
+    console.error("Element not found:", id);
+  }
 };
 
 const Hero = () => {
@@ -60,10 +48,11 @@ const Hero = () => {
           <motion.h2 variants={textVariants}>Patrick Hastings</motion.h2>
           <motion.h1 variants={textVariants}>Software Engineer</motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              View what Ive created
-            </motion.button>
-            <motion.button variants={textVariants} whileTap={{ scale: 0.85 }}>
+            <motion.button
+              variants={textVariants}
+              whileTap={{ scale: 0.85 }}
+              onClick={() => navigateToSection("Contact")}
+            >
               Contact Me
             </motion.button>
           </motion.div>
@@ -74,19 +63,7 @@ const Hero = () => {
             alt=""
           />
         </motion.div>
-        <Parallax type="Technologies" />
       </div>
-      {/* <motion.div
-        className="slidingTextContainer"
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-        >
-        <img src="" alt="" />
-      </motion.div> */}
-      {/* <div className="background">
-        <Parallax type="Technologies" />
-      </div> */}
       <div className="imageContainer">
         <img src="/hero.png" alt="Hero" />
       </div>

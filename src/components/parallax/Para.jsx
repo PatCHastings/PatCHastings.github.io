@@ -32,16 +32,6 @@ const Parallax = ({ type, toggleSection }) => {
         {type === "technologies" ? "Front End" : "Back End"}
       </motion.h1>
       <motion.div
-        className="clouds"
-        style={{
-          y: yBg,
-          backgroundImage: `url(${
-            type === "technologies" ? "/4mountain.png" : "/sun.png"
-          })`,
-        }}
-      ></motion.div>{" "}
-      */}
-      <motion.div
         className="mountainFar"
         style={{
           y: yBg,

@@ -9,7 +9,7 @@ const Introduction = () => {
   const [showIDE, setShowIDE] = useState(false);
 
   const typedTextAboutMe = typingFX(
-    "Hello! I have been coding professionally for over 1.5 years, and I love what I do!"
+    "I often find myself deep in thought; pondering how a great idea could be implemented."
   );
 
   const variants = {
@@ -17,59 +17,123 @@ const Introduction = () => {
     visible: { opacity: 1 },
   };
 
+  const variantsZ = {
+    initial: {
+      opacity: 1,
+    },
+    animate: {
+      opacity: 0,
+      delay: 0.5,
+      transition: {
+        type: "tween",
+        duration: 2.5,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const animate = {
+    initial: { opacity: 0, scale: 0.5 },
+    animate: { opacity: 1, scale: 1 },
+    transition: {
+      duration: 0.8,
+      delay: 0.5,
+      ease: [0, 0.71, 0.2, 1.01],
+    },
+  };
+
   return (
     <div className="introduction">
       <div className="topBar">
         <motion.h1
+          style={{ display: showIDE ? "none" : "block" }}
           variants={variants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 1 }}
         >
-          make the app appear onClick from desktop icon.
+          I always strive to create beautiful and functional applications.
         </motion.h1>
-        <div className="ide-wrapper">
-          <button className="open-ide-button" onClick={() => setShowIDE(true)}>
-            <img src="../../public/mycomputer.png" alt="Open IDE" />
+        <motion.div animate={animate} className="ide-wrapper">
+          <button
+            className="open-ide-button"
+            style={{ display: showIDE ? "none" : "block" }}
+            onClick={() => setShowIDE(true)}
+          >
+            <img src="/mycomputer.png" alt="Open IDE" />
             <p>about_me</p>
           </button>
           <AnimatePresence>
             {showIDE && (
-              <IDEContainer onClose={() => setShowIDE(false)}>
-                <p>// About_Me</p>
+              <IDEContainer
+                onClose={() => setShowIDE(false)}
+                variants={variantsZ}
+                animate="animate"
+              >
+                <p className="aboutMe">// About Me</p>
+                <br />
                 <p>
-                  console.log('Hello! I have been coding professionally for over
-                  1.5 years, and I love what I do! ');
+                  <motion.span
+                    className="colorCase"
+                    variants={variantsZ}
+                    initial="initial"
+                    animate="animate"
+                    transition={{ type: "tween", duration: 1.0 }}
+                  >
+                    console.log('
+                  </motion.span>
+                  Hello! I am a Software Engineer with over 2 years exp and I
+                  love what I do!
                 </p>
-                <pre>{typedTextAboutMe}</pre>
+                <br />
+                <p>
+                  <motion.span
+                    className="colorCase"
+                    variants={variantsZ}
+                    initial="initial"
+                    animate="animate"
+                  >
+                    console.log('
+                  </motion.span>
+                  I have a wonderful family, friends, and extremely positive
+                  outlook on life!
+                </p>
+                <br />
+                <p>
+                  <motion.span
+                    className="colorCase"
+                    variants={variantsZ}
+                    initial="initial"
+                    animate="animate"
+                  >
+                    console.log('
+                  </motion.span>
+                  I have a huge appreciation for great video games, namely
+                  oldschool RPGs and anything made by FromSoftware!;
+                </p>
+                <br />
+                <p>
+                  <motion.span
+                    className="colorCase"
+                    variants={variantsZ}
+                    initial="initial"
+                    animate="animate"
+                  >
+                    console.log('
+                  </motion.span>
+                  For years I have been fascinated with cryptocurrencies and
+                  blockchain; the idea of value decentralized via computer
+                  science unleashed on the internet is a concept I frequently
+                  ponder and research.
+                </p>
+                <br />
+                <pre className="typedTxt">{typedTextAboutMe}</pre>
                 {/* Add more content as needed */}
               </IDEContainer>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
-      {/* <div className="columns">
-        <motion.div // add clipPath for left side and css to contain it
-          className="leftColumn"
-          variants={variants}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 1, delay: 0.5 }} // Adjust delays as needed
-        >
-          <h2>Left Column Heading</h2>
-          <pre>{typedTextLeft}</pre>
-        </motion.div>
-        <motion.div // add clipPath for right side
-          className="rightColumn"
-          variants={variants}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 1, delay: 1 }} // Adjust delays as needed
-        >
-          <h2>Right Column Heading</h2>
-          <pre>{typedTextRight}</pre>
-        </motion.div>
-      </div> */}
     </div>
   );
 };

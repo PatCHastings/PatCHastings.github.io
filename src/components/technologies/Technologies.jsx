@@ -10,6 +10,10 @@ import {
   Spring,
   ReactIcon,
   Typescript,
+  Aws,
+  Html,
+  Css,
+  Sol,
 } from "../svgLogos";
 
 const variants = {
@@ -82,6 +86,26 @@ const technologies = [
     alt: "Spring",
     details: "Spring Boot: Java framework for creating micro services.",
   },
+  {
+    Component: Aws,
+    alt: "AWS",
+    details: "AWS: Amazon Web Services.",
+  },
+  {
+    Component: Html,
+    alt: "HTML",
+    details: "HTML: Hypertext Markup Language.",
+  },
+  {
+    Component: Css,
+    alt: "CSS",
+    details: "CSS: Cascading Style Sheets.",
+  },
+  {
+    Component: Sol,
+    alt: "Solidity",
+    details: "Solidity: Ethereum contract-oriented programming language.",
+  },
 ];
 
 const Technologies = () => {
@@ -97,7 +121,8 @@ const Technologies = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          Methodical mind resolved to solve; <br /> a producer of solutions.
+          Over 2 years programming experience; <br /> Focused on bleeding-edge
+          technologies.
         </p>
         <hr />
       </motion.div>

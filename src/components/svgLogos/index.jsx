@@ -6,3 +6,7 @@ export { ReactIcon } from "./reactIcon";
 export { Spring } from "./Spring";
 export { Sql } from "./Sql";
 export { Typescript } from "./Typescript";
+export { Aws } from "./Aws";
+export { Html } from "./Html";
+export { Css } from "./Css";
+export { Sol } from "./Sol";

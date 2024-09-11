@@ -4,7 +4,20 @@ import { motion } from "framer-motion";
 import "./IDEContainer.scss";
 
 const IDEContainer = ({ onClose, children }) => {
-  const lineNumbers = Array.from({ length: 20 }, (_, i) => i + 1);
+  const lineNumbers = Array.from({ length: 17 }, (_, i) => i + 1);
+
+  const variants = {
+    initial: {
+      opacity: 1,
+    },
+    animate: {
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
   return (
     <motion.div
