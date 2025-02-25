@@ -56,6 +56,23 @@ const Hero = () => {
               Contact Me
             </motion.button>
           </motion.div>
+          <motion.a
+            href="https://expwar.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="test-app-link"
+            variants={textVariants}
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <h3>
+              Help me test my new Polygon blockchain project EXPwar!
+              Participants can receive EXP tokens and migrate their NFTs upon
+              mainnet launch!
+            </h3>
+          </motion.a>
           <motion.img
             variants={textVariants}
             animate="scrollButton"

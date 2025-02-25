@@ -135,23 +135,21 @@
         bottom: -120px;
         white-space: nowrap;
         color: rgba(47, 30, 63, 0.205);
+    }      
+}
 
+.test-app-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: .9rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
 
-        // .slidingText {
-        //     display: flex;
-        //     gap: 20px;
-        //     animation: slide 10s linear infinite;
-        // }
-
-        // @keyframes slide {
-        //     0% {
-        //         transform: translateX(0);
-        //     }
-        //     100% {
-        //         transform: translateX(-100%);
-        //     }
-        // }
-    }   
-
-    
+  h3 {
+    color: #fff;
+  }
 }

@@ -5,24 +5,24 @@ import React, { useState, useEffect } from "react";
 const projects = [
   {
     id: 1,
+    title: "FormIT Software",
+    description:
+      "Cloud-based client aqquisition platform utilizing AI tools to streamline software solutions. Built with React, Node.js, PostgreSQL, and AWS.",
+    imageUrl: "/formit.png",
+  },
+  {
+    id: 2,
+    title: "Crypto Investment CRM",
+    description:
+      "crypto investment reporting portal designed for managers and investors to track asset holdings, manage investments, and view real-time asset price updates. User authentication, role-based access control, portfolio management, price feed updates, and fund financials tracking.",
+    imageUrl: "/cryptoPortal.png",
+  },
+  {
+    id: 3,
     title: "D&D React Spring MVC",
     description:
       "turn-based RPG combat system built with Java Spring Boot for the backend, handling game logic and combat flow, and React.js for the frontend, interacting via REST APIs to display combat results and player actions in real-time.",
     imageUrl: "/dnd.png",
-  },
-  {
-    id: 2,
-    title: "Album Project",
-    description:
-      "Music album catalog SPA website built with JS, JAVA, Spring Boot.",
-    imageUrl: "/albumProject.png",
-  },
-  {
-    id: 3,
-    title: "Codetari",
-    description:
-      "Interactive coding questions in the form of games built in Javascript with the backend in Java, Spring Boot",
-    imageUrl: "/codetariLiftoff.png",
   },
   {
     id: 4,

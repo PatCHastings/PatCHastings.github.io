@@ -70,7 +70,7 @@ const Introduction = () => {
                 variants={variantsZ}
                 animate="animate"
               >
-                <p className="aboutMe">// About Me</p>
+                <p className="aboutMe">{/* About Me */}</p>
                 <br />
                 <p>
                   <motion.span
@@ -80,7 +80,7 @@ const Introduction = () => {
                     animate="animate"
                     transition={{ type: "tween", duration: 1.0 }}
                   >
-                    console.log('
+                    console.log(&apos;
                   </motion.span>
                   Hello! I am a Software Engineer with over 2 years exp and I
                   love what I do!
@@ -93,7 +93,7 @@ const Introduction = () => {
                     initial="initial"
                     animate="animate"
                   >
-                    console.log('
+                    console.log(&apos;
                   </motion.span>
                   I have a wonderful family, friends, and extremely positive
                   outlook on life!
@@ -106,7 +106,7 @@ const Introduction = () => {
                     initial="initial"
                     animate="animate"
                   >
-                    console.log('
+                    console.log(&apos;
                   </motion.span>
                   I have a huge appreciation for great video games, namely
                   oldschool RPGs and anything made by FromSoftware!;
@@ -119,7 +119,7 @@ const Introduction = () => {
                     initial="initial"
                     animate="animate"
                   >
-                    console.log('
+                    console.log(&apos;
                   </motion.span>
                   For years I have been fascinated with cryptocurrencies and
                   blockchain; the idea of value decentralized via computer
